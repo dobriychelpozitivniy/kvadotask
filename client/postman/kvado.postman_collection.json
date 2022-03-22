@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "e1da8bed-ab67-45fb-81af-2adf6c6f1cd9",
+		"name": "kvado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get books by author name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8098/books/by_author_name/Elizaveta",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8098",
+					"path": [
+						"books",
+						"by_author_name",
+						"Elizaveta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get books by author id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8098/books/by_author_id/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8098",
+					"path": [
+						"books",
+						"by_author_id",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get authors by book name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8098/authors/by_book_name/Book2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8098",
+					"path": [
+						"authors",
+						"by_book_name",
+						"Book2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get authors by book id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8098/authors/by_book_id/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8098",
+					"path": [
+						"authors",
+						"by_book_id",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

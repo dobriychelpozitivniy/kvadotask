@@ -1,0 +1,42 @@
+version: "3.9"
+services:
+
+  postgres:
+    image: postgres:14.2
+    environment:
+      POSTGRES_DB: kvadotask
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: qwer
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres/sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./postgres/sql/fill_tables.sql:/docker-entrypoint-initdb.d/fill_tables.sql
+    networks:
+      - backend
+
+  server:
+    build: ./server/
+    restart: always
+    depends_on:
+      - postgres
+    networks:
+      - backend
+    ports:
+      - "8084:8084"
+  
+  client:
+    build: ./client/
+    restart: always
+    depends_on:
+      - server
+      - postgres
+    networks:
+      - backend
+    ports:
+      - "8098:8098"
+    
+
+networks:
+  backend:
+    driver: bridge

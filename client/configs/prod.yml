@@ -1,0 +1,11 @@
+host_port: ":8098"
+
+server_ip: "server"
+server_port: ":8084"
+
+pgdb_config:
+  db_host: 'postgres'
+  db_port: '5432'
+  db_username: 'postgres'
+  db_password: 'qwer'
+  db_name: 'kvadotask'
